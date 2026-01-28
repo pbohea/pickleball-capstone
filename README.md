@@ -1,5 +1,5 @@
 # pickleball-capstone
 
-# UI Backend Repository: https://github.com/pbohea/pickleball-rails
-# UI Frontend iOS Repository: https://github.com/pbohea/pickleball-ios
+UI Backend Repository: https://github.com/pbohea/pickleball-rails
+UI Frontend iOS Repository: https://github.com/pbohea/pickleball-ios
 
