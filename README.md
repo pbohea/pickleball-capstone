@@ -98,11 +98,20 @@ This separation improves modularity, simplifies scaling, and enables independent
 ---
 
 ## Key Features
-- **Direct-to-cloud uploads** for large video files
-- **Automated pose + stroke analysis**
-- **LLM feedback** with actionable coaching tips
-- **Polling-based results page** with structured feedback
-- **Cloud Run jobs** for scalable model execution
+### Direct-to-Cloud Uploads
+Large video files are uploaded directly to Google Cloud Storage via signed URLs, reducing server load and improving reliability.
+
+### Automated Pose and Stroke Analysis
+YOLO Pose-26 extracts body keypoints frame by frame. Custom scoring functions quantify readiness, stance, hip positioning, paddle height, and stability.
+
+### LLM-Generated Coaching Feedback
+Structured metrics are translated into concise, coach-like feedback using GPT-4o-mini, ensuring clarity and personalization.
+
+### Polling-Based Results Page
+The frontend checks for job completion and dynamically renders structured output when analysis is ready.
+
+### Cloud Run Job Execution
+Model processing runs as an on-demand Cloud Run job, enabling horizontal scaling and cost-efficient compute allocation.
 
 ![Feature Highlights](docs/images/features.png)
 
@@ -121,41 +130,60 @@ This separation improves modularity, simplifies scaling, and enables independent
 
 ## Methodology & Implementation
 ### 1) Video Ingestion
-Videos are uploaded directly to GCS using Active Storage direct uploads.
+Videos are uploaded directly to Google Cloud Storage using Active Storage direct uploads. This prevents application server bottlenecks and supports large file sizes typical of match recordings.
 
-### 2) Pose + Technique Analysis
-The Python model runner processes the video and extracts structured signals.
+### 2) Pose and Technique Analysis
+The Python model runner processes the video frame by frame. YOLO Pose-26 extracts 26 body keypoints. From these keypoints, the system computes derived metrics such as:
+
+Knee preload depth
+Stance width ratio
+Hip sink relative to body height
+Paddle readiness height
+Temporal stability
+
+These metrics are aggregated across frames to produce summary statistics including mean, percentile distributions, and decomposed penalty components.
 
 ### 3) LLM Feedback
-Generated analysis is converted into human-readable coaching feedback.
+Structured performance summaries are passed into a carefully constructed prompt. The LLM compares amateur metrics to professional baselines and generates concise coaching feedback that prioritizes the largest mechanical gaps.
 
 ![Methodology Diagram](docs/images/methodology.png)
 
 ---
 
 ## Evaluation & Results
-This section will include:
-- Example output JSONs
-- Sample coaching feedback
-- Quantitative analysis of accuracy and runtime
+Evaluation focuses on three dimensions:
+
+- Runtime Performance: Average inference time per 10 second clip, Cloud Run job completion latency
+- Coaching Quality: Alignment between penalty components and generated advice, human review of feedback clarity and specificity
+- Example outputs include: Structured JSON analysis files, ReadyScore decompositions, sample LLM coaching responses
 
 ![Results Graph](docs/images/results.png)
 
 ---
 
 ## Technical Challenges
-- Large file uploads in Cloud Run
-- Cross-service orchestration without background job workers
-- Secure GCS access patterns
-- Low-latency feedback generation
+### Large File Uploads in Cloud Run
+Cloud Run is not optimized for streaming large uploads through the application server. We resolved this through direct-to-GCS uploads.
+
+### Cross-Service Orchestration Without Workers
+Instead of background job workers, we used Cloud Run Jobs triggered from Rails, with polling to track completion.
+
+### Secure GCS Access Patterns
+Signed URLs and scoped service accounts ensure least-privilege access between services.
+
+### Low-Latency Feedback Generation
+LLM calls are constrained to structured numeric inputs, minimizing token usage and ensuring predictable response time.
 
 ---
 
 ## Market Potential & Differentiators
-Dinkster offers scalable coaching to a rapidly growing sport. Differentiators include:
-- Automated, video-based coaching (not just tracking)
-- LLM-generated personalized feedback
-- End-to-end mobile-friendly workflow
+Dinkster differentiates through:
+Automated video-based coaching rather than manual review
+Structured biomechanical scoring tied directly to advice
+Integrated LLM interpretation rather than static rule-based tips
+Mobile-first workflow designed for casual and competitive players
+
+The product sits at the intersection of sports analytics, computer vision, and generative AI, positioning it for expansion into adjacent racket sports.
 
 ---
 
