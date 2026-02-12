@@ -65,7 +65,7 @@ The system is split into two main services:
 
 ![System Architecture Diagram](docs/images/architecture.png)
 
-<img src="docs/images/erd.png" width="800" />
+<img src="docs/images/erd_new.png" width="800" />
 
 ---
 
