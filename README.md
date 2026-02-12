@@ -36,31 +36,61 @@ Dinkster turns video into actionable coaching. By combining pose estimation, str
 ---
 
 ## Overview of Dinkster
-Dinkster is an application that:
-- Accepts player video uploads (mobile or web)
-- Runs computer vision analysis on the backend
-- Generates structured performance data and LLM coaching feedback
-- Surfaces insights back to the user in a simple report
+Dinkster is a cloud-native coaching application that transforms unstructured video into structured performance insights.
+
+The system:
+- Accepts player video uploads from mobile or web
+- Executes pose estimation and stroke analysis in the cloud
+- Produces structured performance metrics
+- Converts those metrics into personalized coaching feedback using an LLM
+- Returns a simple, readable performance report to the user
+
+At a high level, Dinkster bridges three domains:
+1. Computer vision for extracting biomechanical signals
+2. Structured analytics for quantifying technique
+3. LLM interpretation for delivering human-readable coaching
+
+The result is an end-to-end pipeline that feels intuitive to the user while running sophisticated analysis behind the scenes.
 
 (include video or looped GIF of iphone screen here)
 
 ---
 
 ## Project Workflow
+The workflow is intentionally designed to separate user experience from heavy computation.
+
 1. User uploads a pickleball video
-2. Video is stored in GCP cloud storage
-3. GCP cloud run executes YOLO Pose-26 based CV model + technique analysis
-4. Output JSON is written to storage
-5. App parses JSON & renders LLM-interpreted feedback
+2. Video is stored in Google Cloud Storage
+3. A Cloud Run job executes the YOLO Pose-26 based computer vision model and technique analysis
+4. Structured output JSON is written back to cloud storage
+5. The application parses the JSON and renders LLM-generated feedback
+
+This architecture allows us to scale model execution independently from the application layer while maintaining responsiveness at the user interface.
 
 ![Workflow Diagram](docs/images/workflow.png)
 
 ---
 
 ## System Architecture
-The system is split into two main services:
-- **Rails app** (UI + API + orchestration)
-- **Python model runner** (video analysis + LLM feedback)
+The system is divided into two primary services with clearly defined responsibilities.
+
+### Rails Application
+
+- Handles UI rendering
+- Manages authentication and orchestration
+- Initiates Cloud Run jobs
+- Polls for job completion
+- Retrieves and renders analysis results
+
+### Python Model Runner
+
+- Ingests video from cloud storage
+- Executes YOLO Pose-26 keypoint detection
+- Computes technique-specific metrics
+- Generates structured JSON output
+- Calls the OpenAI API to produce coaching feedback
+
+This separation improves modularity, simplifies scaling, and enables independent iteration on modeling logic and application logic.
 
 
 <img src="docs/images/erd_new.png" width="800" />
