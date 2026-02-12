@@ -2,7 +2,7 @@
 
 An end-to-end pickleball coaching application that ingests player video, analyzes technique with computer vision, and delivers personalized LLM feedback to help players improve faster.
 
-<img width="1024" height="1536" alt="ChatGPT Image Feb 12, 2026, 12_35_23 AM" src="https://github.com/user-attachments/assets/6d3c6b8e-06c6-4c77-acbb-c370f019eb56" />
+<img width="256" height="384" alt="ChatGPT Image Feb 12, 2026, 12_35_23 AM" src="https://github.com/user-attachments/assets/6d3c6b8e-06c6-4c77-acbb-c370f019eb56" />
 
 
 ---
