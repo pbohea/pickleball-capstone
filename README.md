@@ -66,8 +66,6 @@ The workflow is intentionally designed to separate user experience from heavy co
 4. Structured output JSON is written back to cloud storage
 5. The application parses the JSON and renders LLM-generated feedback
 
-This architecture allows us to scale model execution independently from the application layer while maintaining responsiveness at the user interface.
-
 ![Workflow Diagram](docs/images/workflow.png)
 
 ---
@@ -90,8 +88,6 @@ The system is divided into two primary services with clearly defined responsibil
 - Computes technique-specific metrics
 - Generates structured JSON output
 - Calls the OpenAI API to produce coaching feedback
-
-This separation improves modularity, simplifies scaling, and enables independent iteration on modeling logic and application logic.
 
 
 <img src="docs/images/erd_new.png" width="800" />
