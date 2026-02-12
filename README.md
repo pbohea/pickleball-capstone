@@ -60,10 +60,8 @@ Dinkster is an application that:
 ## System Architecture
 The system is split into two main services:
 - **Rails app** (UI + API + orchestration)
-- INSERT ERD HERE
 - **Python model runner** (video analysis + LLM feedback)
 
-![System Architecture Diagram](docs/images/architecture.png)
 
 <img src="docs/images/erd_new.png" width="800" />
 
