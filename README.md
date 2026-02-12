@@ -17,13 +17,13 @@ An end-to-end pickleball coaching application that ingests player video, analyze
 7. Methodology & Implementation
 8. Evaluation & Results
 9. Technical Challenges
-10. Market Potential & Differentiators
-11. Future Work
-12. Demo
-13. Getting Started
-14. Repository Structure
-15. References
-16. Acknowledgements & About Us
+10. Market Potential & Differentiators - potentially move this to #1, talk about TAM, competitors, etc. 
+12. Future Work
+13. Demo
+14. Getting Started
+15. Repository Structure
+16. References
+17. Acknowledgements & About Us
 
 ---
 
