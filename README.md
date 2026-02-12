@@ -64,6 +64,7 @@ The system is split into two main services:
 - **Python model runner** (video analysis + LLM feedback)
 
 ![System Architecture Diagram](docs/images/architecture.png)
+![Pickleball ERD](docs/images/erd.png)
 
 ---
 
