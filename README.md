@@ -36,22 +36,22 @@ Dinkster turns video into actionable coaching. By combining pose estimation, str
 ---
 
 ## Overview of Dinkster
-Dinkster is a full-stack application that:
+Dinkster is an application that:
 - Accepts player video uploads (mobile or web)
 - Runs computer vision analysis on the backend
 - Generates structured performance data and LLM coaching feedback
 - Surfaces insights back to the user in a simple report
 
-![Product Screenshot](docs/images/ui_overview.png)
+(include video or looped GIF of iphone screen here)
 
 ---
 
 ## Project Workflow
 1. User uploads a pickleball video
-2. Video is stored in cloud storage
-3. A model job runs pose + technique analysis
+2. Video is stored in GCP cloud storage
+3. GCP cloud run executes YOLO Pose-26 based CV model + technique analysis
 4. Output JSON is written to storage
-5. The UI polls for results and renders feedback
+5. App parses JSON & renders LLM-interpreted feedback
 
 ![Workflow Diagram](docs/images/workflow.png)
 
@@ -60,6 +60,7 @@ Dinkster is a full-stack application that:
 ## System Architecture
 The system is split into two main services:
 - **Rails app** (UI + API + orchestration)
+- INSERT ERD HERE
 - **Python model runner** (video analysis + LLM feedback)
 
 ![System Architecture Diagram](docs/images/architecture.png)
@@ -78,9 +79,9 @@ The system is split into two main services:
 ---
 
 ## Tech Stack & Tools
-- **Frontend/UI:** Rails views, Turbo, Active Storage
+- **Frontend/UI:** Rails views, iOS Swift for native Apple mobile capability
 - **Backend:** Ruby on Rails, Cloud Run
-- **Modeling:** Python, OpenAI API, pose estimation pipeline
+- **Modeling:** Python, OpenAI API, YOLO Pose v26
 - **Storage:** Google Cloud Storage
 - **Deployment:** Cloud Build + Cloud Run
 
