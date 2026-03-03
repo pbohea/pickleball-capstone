@@ -155,7 +155,7 @@ These metrics are aggregated across frames to produce summary statistics includi
 ### 3) LLM Feedback
 Structured performance summaries are passed into a carefully constructed prompt. The LLM compares amateur metrics to professional baselines and generates concise coaching feedback that prioritizes the largest mechanical gaps.
 
-![Methodology Diagram](docs/images/methodology.png)
+![LLM Feedback](assets/LLM feedback.png)
 
 ---
 
