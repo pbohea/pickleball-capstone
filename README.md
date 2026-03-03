@@ -241,4 +241,4 @@ pickleball-capstone/
 ## Acknowledgements & About Us
 Capstone team project. Placeholder for team names, roles, and advisor acknowledgements.
 
-![Team Photo](assets/team_photo)
+![Team Photo](assets/team_photo.png)
