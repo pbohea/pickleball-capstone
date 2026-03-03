@@ -55,8 +55,9 @@ The result is an end-to-end pipeline that feels intuitive to the user while runn
 
 
 
- <img src="assets/1v1_demo_small_gif.gif" alt="1v1 demo" width="260" />
-
+<p align="center">
+    <img src="assets/1v1_demo_small_gif.gif" alt="1v1 demo" width="260" />
+</p>
 
 
 ---
@@ -70,8 +71,10 @@ The workflow is intentionally designed to separate user experience from heavy co
 4. Structured output JSON is written back to cloud storage
 5. The application parses the JSON and renders LLM-generated feedback
 
-<img src="assets/web_version_small_gif.gif" alt="1v1 demo" width="660" />
+<p align="center">
 
+<img src="assets/web_version_small_gif.gif" alt="1v1 demo" width="660" />
+</p>
 ---
 
 ## System Architecture
