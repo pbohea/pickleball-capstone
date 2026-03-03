@@ -32,7 +32,10 @@ Pickleball is one of the fastest-growing sports in the U.S., but in-person coach
 
 Dinkster turns video into actionable coaching. By combining pose estimation, stroke segmentation, and LLM-based feedback, the system provides a personalized, scalable alternative to traditional coaching.
 
-![pickleball](https://github.com/user-attachments/assets/7e4c1735-d3db-482d-a055-407df575db1a)
+<p align="center">
+
+<img src="assets/web_version_small_gif.gif" alt="1v1 demo" width="660" />
+</p>
 
 ---
 
@@ -72,9 +75,11 @@ The workflow is intentionally designed to separate user experience from heavy co
 5. The application parses the JSON and renders LLM-generated feedback
 
 <p align="center">
-
-<img src="assets/web_version_small_gif.gif" alt="1v1 demo" width="660" />
+    <img src="assets/App_diagram.png" alt="app_diagram" width="660" />
 </p>
+
+
+
 ---
 
 ## System Architecture
