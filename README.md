@@ -53,7 +53,11 @@ At a high level, Dinkster bridges three domains:
 
 The result is an end-to-end pipeline that feels intuitive to the user while running sophisticated analysis behind the scenes.
 
-(include video or looped GIF of iphone screen here)
+
+
+ <img src="assets/1v1_demo_small_gif.gif" alt="1v1 demo" width="260" />
+
+
 
 ---
 
@@ -189,12 +193,6 @@ The product sits at the intersection of sports analytics, computer vision, and g
 - Skill benchmarking and progress tracking
 - Coach marketplace integrations
 - Expanded dataset for higher-quality technique classification
-
----
-
-## Demo
-
- <img src="assets/1v1_demo_small_gif.gif" alt="1v1 demo" width="260" />
 
 
 ---
