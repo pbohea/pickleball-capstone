@@ -193,7 +193,7 @@ The product sits at the intersection of sports analytics, computer vision, and g
 ---
 
 ## Demo
-![Demo GIF](docs/images/demo.gif)
+ ![1v1 demo](assets/1v1_demo_small_gif.gif)
 
 ---
 
