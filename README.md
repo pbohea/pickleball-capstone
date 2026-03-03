@@ -239,6 +239,6 @@ pickleball-capstone/
 ---
 
 ## Acknowledgements & About Us
-Capstone team project. Placeholder for team names, roles, and advisor acknowledgements.
+Special thanks to Nick Kadochnikov for his mentorship throughout this project
 
 ![Team Photo](assets/team_photo.png)
