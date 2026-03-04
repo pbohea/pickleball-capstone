@@ -28,7 +28,7 @@ An end-to-end pickleball coaching application that ingests player video, analyze
 ---
 
 ## Project Motivation
-Pickleball is one of the fastest-growing sports in the U.S., but in-person coaching is limited, expensive, and inconsistent. Players frequently record themselves to self-diagnose issues, yet lack objective feedback or structured guidance.
+For the fourth year in a row, pickleball is the fastest-growing sport in the United States. Roughly 20 million people played in 2024, up 45% from 2023 and 311% from 2021. There are over 82,000 pickelball playing courts nationwide, a number that continues to grow nationwide as the number of amateur players increases. Pickleball coaching solutions for players seeking to get better are limited to expensive and inconsistent in-person coaching or less personal statistic-focused analyses. Players frequently record themselves to self-diagnose issues, yet lack objective feedback or structured guidance.
 
 Dinkster turns video into actionable coaching. By combining pose estimation, stroke segmentation, and LLM-based feedback, the system provides a personalized, scalable alternative to traditional coaching.
 
