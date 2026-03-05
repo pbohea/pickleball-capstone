@@ -167,8 +167,8 @@ Evaluation focuses on three dimensions:
 - Coaching Quality: Alignment between penalty components and generated advice, human review of feedback clarity and specificity
 - Example outputs include: Structured JSON analysis files, ReadyScore decompositions, sample LLM coaching responses
 
-![LLM Feedback](assets/graph.png)
-![LLM Feedback](assets/graph2.png)
+![Shot Analysis Ball Speed](assets/graph.png)
+![Shot Analysis Ball Direction](assets/graph2.png)
 
 ---
 
