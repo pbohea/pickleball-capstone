@@ -122,7 +122,7 @@ The frontend checks for job completion and dynamically renders structured output
 ### Cloud Run Job Execution
 Model processing runs as an on-demand Cloud Run job, enabling horizontal scaling and cost-efficient compute allocation.
 
-![Feature Highlights](docs/images/features.png)
+![Feature Highlights](assets/analysis_history.png)
 
 ---
 
