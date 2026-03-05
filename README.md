@@ -134,9 +134,8 @@ Model processing runs as an on-demand Cloud Run job, enabling horizontal scaling
 - **Deployment:** Cloud Build + Cloud Run
 
 <p align="center">
-    <img src="assets/rally.gif" alt="1v1 demo" width="260" />
+    <img src="assets/rally.gif" alt="1v1 demo" width="400" />
 </p>
----
 
 ## Methodology & Implementation
 ### 1) Video Ingestion
@@ -168,7 +167,10 @@ Evaluation focuses on three dimensions:
 - Example outputs include: Structured JSON analysis files, ReadyScore decompositions, sample LLM coaching responses
 
 ![Shot Analysis Ball Speed](assets/graph.png)
+Frame-level ball speed shows sharp velocity spikes at paddle contact, which serve as the primary signal for detecting shot events.
+
 ![Shot Analysis Ball Direction](assets/graph2.png)
+Sudden reversals in horizontal ball velocity confirm true contact moments and reduce false positives from random motion.
 
 ---
 
