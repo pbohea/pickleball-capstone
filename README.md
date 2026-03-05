@@ -133,7 +133,9 @@ Model processing runs as an on-demand Cloud Run job, enabling horizontal scaling
 - **Storage:** Google Cloud Storage
 - **Deployment:** Cloud Build + Cloud Run
 
-
+<p align="center">
+    <img src="assets/rally.gif" alt="1v1 demo" width="260" />
+</p>
 ---
 
 ## Methodology & Implementation
@@ -165,7 +167,8 @@ Evaluation focuses on three dimensions:
 - Coaching Quality: Alignment between penalty components and generated advice, human review of feedback clarity and specificity
 - Example outputs include: Structured JSON analysis files, ReadyScore decompositions, sample LLM coaching responses
 
-![Results Graph](docs/images/results.png)
+![LLM Feedback](assets/graph.png)
+![LLM Feedback](assets/graph2.png)
 
 ---
 
