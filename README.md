@@ -1,6 +1,6 @@
 # Dinkster: Computer Vision + LLM Pickleball Coaching
 
-An end-to-end pickleball coaching application that ingests player video, analyzes technique with computer vision, and delivers personalized LLM feedback to help players improve faster.
+Dinkster is an end-to-end pickleball coaching application that ingests player video, analyzes technique with computer vision, and delivers personalized LLM feedback to help players improve faster. Users simply upload a video of themselves playing and received structured instruction on how to improve their game from a personalized LLM coach.
 
 <img width="256" height="384" alt="ChatGPT Image Feb 12, 2026, 12_35_23 AM" src="https://github.com/user-attachments/assets/6d3c6b8e-06c6-4c77-acbb-c370f019eb56" />
 
@@ -133,7 +133,6 @@ Model processing runs as an on-demand Cloud Run job, enabling horizontal scaling
 - **Storage:** Google Cloud Storage
 - **Deployment:** Cloud Build + Cloud Run
 
-![Tech Stack](docs/images/tech_stack.png)
 
 ---
 
