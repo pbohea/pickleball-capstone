@@ -166,10 +166,10 @@ Evaluation focuses on three dimensions:
 - Coaching Quality: Alignment between penalty components and generated advice, human review of feedback clarity and specificity
 - Example outputs include: Structured JSON analysis files, ReadyScore decompositions, sample LLM coaching responses
 
-![Shot Analysis Ball Speed](assets/graph.png)
+![Shot Analysis Ball Speed](assets/graphs.png)
 Frame-level ball speed shows sharp velocity spikes at paddle contact, which serve as the primary signal for detecting shot events.
 
-![Shot Analysis Ball Direction](assets/graph2.png)
+![Shot Analysis Ball Direction](assets/graphs2.png)
 Sudden reversals in horizontal ball velocity confirm true contact moments and reduce false positives from random motion.
 
 ---
